@@ -13,7 +13,7 @@ namespace PdfEngineSharp
         {
             _pageTree = new PdfPageTree();
 
-            _header = "%PDF-1.4\n";
+            _header = "%PDF-1.4\n"; // Using PDF Specification 1.4 from opnsource.adobe.com
             _body = "1 0 obj\n";
             _body += "  << /Type /Catalog /Pages 2 0 R >>\n";
             _body += "endobj\n";
@@ -37,7 +37,7 @@ namespace PdfEngineSharp
             result += "<< /Size " + objCount.ToString() + "\n";
             result += "   /Root 1 0 R\n";
             result += ">>\n";
-            result += "%%EOF";
+            result += "%%EOF"; // End of PDF File
 
             return result;
         }
@@ -101,6 +101,12 @@ namespace PdfEngineSharp
             if (_pageTree.NoOfPages() < pageNo)
                 throw new Exception("Exception: Page number exceeding no of pages in pdf");
             _pageTree.Add(pageNo, curve);
+        }
+
+        public void Save(string path)
+        {
+            string content = this.Get();
+            File.WriteAllText(path, content);
         }
 
     }

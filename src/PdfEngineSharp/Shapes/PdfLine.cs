@@ -21,10 +21,5 @@
 }
 
 /*
-use move to and line for creating lines
-0 0 1 RG       % stroke color blue
-2 w            % line width
-100 100 m      % move to first vertex
-200 100 l      % line to second vertex
-S              % stroke
+
 */

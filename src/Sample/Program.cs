@@ -1,16 +1,25 @@
 ﻿using PdfEngineSharp;
 using PdfEngineSharp.Shapes;
 
-Console.WriteLine("Hello from sample for PDF Engine Sharp...");
+Console.WriteLine("Hello from sample for PDF Engine Sharp ...");
 
-Pdf myPdf = new Pdf();
+Pdf pdf = new Pdf();
 
-myPdf.Add(1, new PdfLine(
-    new PdfPoint(10, 10),
-    new PdfPoint(100, 100)
-    ));
+// To draw line from point x to point y
+pdf.Add(1, new PdfLine(new PdfPoint(10, 10), new PdfPoint(100, 100)));
 
-string output = myPdf.Get();
+// to draw rectangle
+pdf.Add(1, new PdfRectangle(new PdfPoint(200, 100), 200, 100));
 
-Console.WriteLine("Output string of PDF.");
-Console.WriteLine(output);
+// to add text box
+pdf.Add(1, new PdfText(new PdfPoint(100, 500), "Hello World!"));
+
+// to add custome shape
+pdf.Add(1, new PdfCustomeShape(new PdfPoint(200, 200), new List<PdfPoint>() { new PdfPoint(300, 200), new PdfPoint(400, 100)}));
+
+//  to add circle
+pdf.Add(1, new PdfCircle(new PdfPoint(550, 550), 50));
+
+pdf.Save("D:\\temp\\test.pdf");
+
+

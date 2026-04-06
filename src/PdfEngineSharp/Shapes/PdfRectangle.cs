@@ -35,13 +35,5 @@
     }
 }
 /*
-0 0 1 RG        % stroke color blue
-0.8 0.8 1 rg    % fill color light blue
-2 w              % line width
-100 100 200 100 re  % rectangle x y width height
-B                % fill + stroke
--- code --
-B = fill and stroke together (f + S).
 
-100 100 200 100 re  % rectangle at (100,100), width=200, height=100
 */

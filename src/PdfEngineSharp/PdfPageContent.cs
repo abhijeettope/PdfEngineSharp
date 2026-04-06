@@ -105,16 +105,6 @@ namespace PdfEngineSharp
 }
 
 /*
-% --- Page 1 Content ---
-8 0 obj
-  << /Length 44 >>
-stream
-BT
-  /F1 24 Tf
-  50 100 Td
-  (Page 1: Hello!) Tj
-ET
-endstream
-endobj
+
 */
 

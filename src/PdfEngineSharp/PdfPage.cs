@@ -92,11 +92,5 @@ namespace PdfEngineSharp
 }
 
 /*
-% --- Page 1 ---
-4 0 obj
-  << /Type /Page
-     /Parent 3 0 R
-     /Contents 8 0 R
-  >>
-endobj
+
 */

@@ -62,10 +62,5 @@
 }
 
 /*
-I think following will be common part in all the shapes hence shape class will implement that part
-0 0 1 RG        % stroke color blue
-0.8 0.8 1 rg    % fill color light blue
-2 w              % line width
-.....
-B                % fill + stroke
+
 */  
