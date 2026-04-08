@@ -4,30 +4,19 @@ namespace PdfEngineSharp.Shapes
 {
     public class PdfCircle : PdfShape
     {
-        private const double k = 0.55228; // constant for perfect circle approximation
         private readonly double _radius;
-
         public PdfCircle(PdfPoint start, double radius) : base(start)
         {
             this._radius = radius;
         }
-
         public override string ToString()
-        {
-            PdfPoint P0 = new PdfPoint(this.Start.X, this.Start.Y + (int)this._radius);
-            PdfPoint P1 = new PdfPoint(this.Start.X + (int)(_radius * 0.55), this.Start.Y + (int)(_radius * 0.99));
-            PdfPoint P2 = new PdfPoint(this.Start.X + (int)(_radius * 0.99), this.Start.Y + (int)(_radius * 0.55));
-            PdfPoint P3 = new PdfPoint(this.Start.X + (int)this._radius, this.Start.Y);
-                        
+        {                        
             string result = GetTopPart();
             result += $"{Start.X} {Start.Y + _radius} m\n";
             result += $"{PdfEngineHelper.Fmt(Start.X + _radius * 0.55)} {PdfEngineHelper.Fmt(Start.Y + _radius * 0.99)} {PdfEngineHelper.Fmt(Start.X + _radius * 0.99)} {PdfEngineHelper.Fmt(Start.Y + _radius * 0.55)} {Start.X + _radius} {Start.Y} c\n";
             result += $"{PdfEngineHelper.Fmt(Start.X + _radius * 0.99)} {PdfEngineHelper.Fmt(Start.Y - _radius * 0.55)} {PdfEngineHelper.Fmt(Start.X + _radius * 0.55)} {PdfEngineHelper.Fmt(Start.Y - _radius * 0.99)} {Start.X} {Start.Y - _radius} c\n";
             result += $"{PdfEngineHelper.Fmt(Start.X - _radius * 0.55)} {PdfEngineHelper.Fmt(Start.Y - _radius * 0.99)} {PdfEngineHelper.Fmt(Start.X - _radius * 0.99)} {PdfEngineHelper.Fmt(Start.Y - _radius * 0.55)} {Start.X - _radius} {Start.Y} c\n";
             result += $"{PdfEngineHelper.Fmt(Start.X - _radius * 0.99)} {PdfEngineHelper.Fmt(Start.Y + _radius * 0.55)} {PdfEngineHelper.Fmt(Start.X - _radius * 0.55)} {PdfEngineHelper.Fmt(Start.Y + _radius * 0.99)} {Start.X} {Start.Y + _radius} c\n";
-            //result += $"{p1} {Start.X} {Start.X} {p2} {Start.X} {p2} c\n";
-            //result += $"{Start.X} {PdfEngineHelper.Fmt(Start.X - _radius)} {p2} {p2} {p2} {Start.Y} c\n";
-            //result += $"{p2} {p1} {Start} {Start} c\n";
             result += $"{FillOrStroke}\n";
             return result;
         }
