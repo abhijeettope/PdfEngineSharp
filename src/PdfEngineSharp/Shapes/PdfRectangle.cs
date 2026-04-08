@@ -35,5 +35,5 @@
     }
 }
 /*
-
+x y height width re // will draw rectangle from point (x, y) of height and width specified
 */

@@ -21,5 +21,8 @@
 }
 
 /*
-
+ Drawing Line in PDF
+a b m // move to point (a, b)
+x y l // draw line from current point to (x, y)
+so this will draw line from (a, b) to (x, y)
 */

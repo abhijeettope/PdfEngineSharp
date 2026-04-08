@@ -112,6 +112,13 @@ namespace PdfEngineSharp
     }
 }
 
+/*
+ https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.4.pdf
+Page No. : 162 chapter 4
+Path construction operators
+ */
+
+
 // IPdfDrawable will reduce code base size by a lot try using this
 // User string builder instead of appending string
 // todo : add resouces to the pdf file for page font and all other things
