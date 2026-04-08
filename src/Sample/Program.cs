@@ -19,6 +19,11 @@ Pdf pdf = new Pdf();
 
 //  to add circle
 pdf.Add(1, new PdfCircle(new PdfPoint(200, 500), 20));
+pdf.Add(1, new PdfCircle(new PdfPoint(200, 500), 30));
+pdf.Add(1, new PdfCircle(new PdfPoint(300, 500), 20));
+pdf.Add(1, new PdfCircle(new PdfPoint(300, 500), 30));
+
+pdf.Add(1, new PdfCircle(new PdfPoint(250, 450), 110));
 
 // to draw cubic bezier curve
 //pdf.Add(1, new PdfBezierCurve(new PdfPoint(100, 200), new PdfPoint(155, 199), new PdfPoint(199, 155), new PdfPoint(200, 100)));

@@ -13,7 +13,7 @@
             Start = start ?? throw new ArgumentNullException(nameof(start));
             StrokeColor = new PdfColor(0, 0, 1); // default stroke = blue
             FillColor = new PdfColor(1, 0, 0);   // default fill = red
-            LineWidth = 2;
+            LineWidth = 1;
             FillOrStroke = "S";                 // default: stroke only
         }
 
