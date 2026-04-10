@@ -47,5 +47,4 @@ P1 => [ x + ( r * 0.55 ), y + ( r * 0.99 ) ]
 P2 => [ x + ( r * 0.99 ), y + ( r * 0.55 ) ]
 P3 => [ x + r, y ]
 
-need to check how we can get points for others arcs of circle
 */
