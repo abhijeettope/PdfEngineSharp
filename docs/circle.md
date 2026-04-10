@@ -59,7 +59,7 @@ So for drawing arc in second quadrant our operator will look like bellow.
 
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y+r c // draw curve till last point with 2 control points  
 
-So out final final code for circle in pdf will look like bellow
+So our final code for circle in pdf will look like bellow
 
 x y+r m // move to the first point  
 x+r*0.55 y+r*0.99 x+r*0.99 y+r*0.55 x+r y c // draw arc in first quadrant  
