@@ -60,11 +60,11 @@ x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y+r c // draw curve till last point with 2
 
 so our final operation will look like bellow  
 
-``
+---  
 x y+r m // move to the first point  
 x+r*0.55 y+r*0.99 x+r*0.99 y+r*0.55 x+r y c // draw arc in first quadrant  
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y-r c // draw arc in fourth quadrant  
 x-r*0.55 y-r*0.99 x-r*0.99 y-r*0.55 x-r y c // draw arc in third quadrant  
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y+r c // draw arc in second quadrant  
-S // stroke this will draw line or to fill the cirlce we can use 'f' or to do both we can use 'B' instead of S for more details refere section 4.4.2 Path-Painting Operators of above mentioned PDF Specifications  
-``
+S // stroke this will draw line or to fill the cirlce we can use 'f' or to do both we can use 'B' instead of S for more details refere section 4.4.2 Path-Painting Operators of above mentioned PDF Specifications
+---  
