@@ -45,21 +45,21 @@ x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y-r c // draw curve till last point with 2
 
 Now we are at -ve Y Axis  
 From here we will draw arc for the third quadrant
-third quadrant is similar to first quarant just in apposite direction so all the points
-will move as first quadrant just in apposite direction, we only need to substract factors rather than adding them.
+third quadrant is similar to first quarant just in opposite direction so all the points
+will move as first quadrant just in opposite direction, we only need to substract factors rather than adding them.
 So for drawing arc in third quadrant our operator will look like bellow.  
 
 x-r*0.55 y-r*0.99 x-r*0.99 y-r*0.55 x-r y c // draw curve till last point with 2 control points  
 
-Now we are the -ve X axis, and only quadrant left is the second quadrant
-and second quadrant is similar to fourth quadrant just the thing is that second quadrant is apposite
-to first quadrant so instead of adding we will have to substract and insead of substracting we will have
-to add the factors for 2 end points and 2 control points   
+Now we are on -ve X axis, and only quadrant left is the second quadrant
+and second quadrant is similar to fourth quadrant just the thing is that second quadrant is opposite
+to fourth quadrant so instead of adding we will have to substract and insead of substracting we will have
+to add the factors for end points and control points   
 So for drawing arc in second quadrant our operator will look like bellow.  
 
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y+r c // draw curve till last point with 2 control points  
 
-So our final code for circle in pdf will look like as bellow  
+Which give us our final code for drawing circle in pdf as bellow  
 
 x y+r m // move to the first point  
 x+r*0.55 y+r*0.99 x+r*0.99 y+r*0.55 x+r y c // draw arc in first quadrant  
