@@ -36,29 +36,30 @@ x y+r m // move to the first point
 x+r*0.55 y+r*0.99 x+r*0.99 y+r*0.55 x+r y c // draw curve till last point with 2 control points  
 
 With this we are done drawing arc in first quadrant, in the same way we can draw arc for all the quadrants and complete our cirlce,
-but as we are already on +ve X Axis we will draw arc in fourth quadrant, in fourth quadrant our Y axis points are less than y ( codinate of center ) we will subtract r*0.55 and r*0.99 from y
+but as we are already on +ve X Axis we will draw arc in fourth quadrant, in fourth quadrant our Y axis points are less than y ( codinate of center ) we will subtract r*0.55 and r*0.99 from y, and
 also for previous arc we were drawing from Y Axis to X Axis,
 but for fourth quadrant we are drawing from X Axis to Y Axis so we will add r*0.99 first to x and then r*0.55
 so for drawing arc in fourth quadrant our operator will look like bellow.  
 
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y-r c // draw curve till last point with 2 control points  
 
-Now we are at -ve Y Axis so as we will draw arc for the third quadrant
+Now we are at -ve Y Axis  
+From here we will draw arc for the third quadrant
 third quadrant is similar to first quarant just in apposite direction so all the points
-will move as first quadrant, we only need to substract factors rather than adding them.
-so for drawing arc in third quadrant our operator will look like bellow.  
+will move as first quadrant just in apposite direction, we only need to substract factors rather than adding them.
+So for drawing arc in third quadrant our operator will look like bellow.  
 
 x-r*0.55 y-r*0.99 x-r*0.99 y-r*0.55 x-r y c // draw curve till last point with 2 control points  
 
-now we are the -ve X axis, and only quadrant left is the second quadrant
-and second quadrant is similar to fourth quadrant just the thing is that second quadratn is apposite
+Now we are the -ve X axis, and only quadrant left is the second quadrant
+and second quadrant is similar to fourth quadrant just the thing is that second quadrant is apposite
 to first quadrant so instead of adding we will have to substract and insead of substracting we will have
-to add the factors
-so for drawing arc in third quadrant our operator will look like bellow.  
+to add the factors for 2 end points and 2 control points   
+So for drawing arc in second quadrant our operator will look like bellow.  
 
 x+r*0.99 y-r*0.55 x+r*0.55 y-r*0.99 x y+r c // draw curve till last point with 2 control points  
 
-so our final operation will look like bellow  
+So out final final code for circle in pdf will look like bellow
 
 x y+r m // move to the first point  
 x+r*0.55 y+r*0.99 x+r*0.99 y+r*0.55 x+r y c // draw arc in first quadrant  
